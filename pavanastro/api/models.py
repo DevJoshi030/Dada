@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.deletion import CASCADE
 
 # Create your models here.
 
@@ -37,3 +38,18 @@ class Subscribe(models.Model):
     def __str__(self):
 
         return self.email
+
+
+class Comment(models.Model):
+
+    post = models.ForeignKey(to=Blog, on_delete=models.CASCADE)
+    name = models.CharField(max_length=30)
+    email = models.EmailField(null=False)
+    message = models.TextField(null=False)
+    active = models.BooleanField(default=False)
+    parent = models.ForeignKey(
+        to="self", on_delete=CASCADE, null=True, blank=True)
+    created_at = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.post.title + " => " + self.name

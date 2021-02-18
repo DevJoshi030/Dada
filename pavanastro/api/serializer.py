@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Contact, Blog, Subscribe
+from .models import Comment, Contact, Blog, Subscribe
 
 
 class ContactSerializer(serializers.ModelSerializer):
@@ -63,3 +63,24 @@ class CategorySerializer(serializers.ModelSerializer):
 
         model = Blog
         fields = ('tag', 'count')
+
+
+class AddCommentSerializer(serializers.ModelSerializer):
+
+    comment_type = serializers.CharField(max_length=8)
+    comment_id = serializers.IntegerField()
+    post = serializers.CharField(max_length=200)
+
+    class Meta:
+
+        model = Comment
+        fields = ('name', 'email', 'post', 'message',
+                  'comment_type', 'comment_id')
+
+
+class GetCommentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+
+        model = Comment
+        fields = ('id', 'name', 'message', 'created_at', "parent")
