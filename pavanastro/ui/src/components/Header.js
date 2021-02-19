@@ -15,22 +15,22 @@ const Header = (props) => {
         {/* Nav */}
         <nav>
           <ul id="ownmenu" class="ownmenu">
-            <li class="active">
+            <li class={props.active === "home" ? "active" : ""}>
               <Link to="/"> HOME</Link>
             </li>
-            <li>
+            <li class={props.active === "about" ? "active" : ""}>
               <Link to="/about">about us</Link>
             </li>
-            <li>
+            <li class={props.active === "services" ? "active" : ""}>
               <Link to="/services">services</Link>
             </li>
-            <li>
+            <li class={props.active === "portfolio" ? "active" : ""}>
               <Link to="/portfolio">portfolio</Link>
             </li>
-            <li>
+            <li class={props.active === "blog" ? "active" : ""}>
               <Link to="/blogs/1">blog</Link>
             </li>
-            <li>
+            <li class={props.active === "contact" ? "active" : ""}>
               <Link to="/contact">contact us</Link>
             </li>
           </ul>

@@ -13,7 +13,7 @@ const Services = () => {
   return (
     <div id="wrap">
       <div id="main-wrapper">
-        <Header />
+        <Header active="services" />
         <section class="sub-banner">
           <div class="container">
             <div class="position-center-center">

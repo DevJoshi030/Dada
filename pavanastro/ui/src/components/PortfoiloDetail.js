@@ -12,7 +12,7 @@ const PortfoiloDetail = () => {
   return (
     <div id="wrap">
       <div id="main-wrapper">
-        <Header />
+        <Header active="portfolio" />
         {/*======= PORTFLIO DETAIL =========*/}
         <section class="portfolio-detail">
           {" "}

@@ -4,3 +4,17 @@
 .parallax-about {
   background: url(../images/bg/bg-2.jpg) center center fixed no-repeat;
 }
+
+.btn-post {
+  color: white;
+  background-color: #444444;
+}
+
+.btn-post:focus {
+  color: white;
+  background-color: #444444;
+}
+
+.no-padding {
+  padding: 0px;
+}

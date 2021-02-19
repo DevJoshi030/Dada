@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div id="wrap">
       <div id="main-wrapper">
-        <Header />
+        <Header active="about" />
 
         <section class="sub-banner">
           <div class="container">

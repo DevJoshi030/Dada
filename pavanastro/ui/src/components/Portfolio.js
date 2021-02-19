@@ -12,7 +12,7 @@ const Portfolio = () => {
   return (
     <div id="wrap">
       <div id="main-wrapper">
-        <Header />
+        <Header active="portfolio" />
         {/*======= SUB BANNER =========*/}
         <section class="sub-banner">
           <div class="container">

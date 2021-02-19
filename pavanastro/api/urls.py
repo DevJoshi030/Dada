@@ -23,5 +23,6 @@ urlpatterns = [
     path('blog-list-category/<str:category>/<int:page>/',
          BlogCategoryList.as_view(), name="blog-list-category"),
     path('add-comment/', AddComment.as_view(), name="add-comment"),
-    path('get-comments/<str:slug>/', GetComments.as_view(), name="get-comments"),
+    path('get-comments/<str:slug>/',
+         GetComments.as_view(), name="get-comments"),
 ]

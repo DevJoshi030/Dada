@@ -25,7 +25,7 @@ const Home = (props) => {
   return (
     <div id="wrap" class="no-padding">
       <div id="main-wrapper">
-        <Header />
+        <Header active="home" />
         {/*======= HOME MAIN SLIDER =========*/}
         <MainSlider />
         {/*======= ABOUT SECTION =========*/}

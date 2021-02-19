@@ -74,7 +74,7 @@ const Blog = (props) => {
   return (
     <div id="wrap">
       <div id="main-wrapper">
-        <Header />
+        <Header active="blog" />
 
         {/*======= SUB BANNER =========*/}
         <section class="sub-banner">
